@@ -1,5 +1,7 @@
 package edu.wctc;
 
+import edu.wctc.roomimpl.IRoomTypes;
+
 public abstract class Room {
     private String name;
     // Connections to other rooms.
@@ -10,7 +12,6 @@ public abstract class Room {
     public Room(String name) {
         this.name = name;
     }
-
     // Returns the Room connected to this Room in the given
     // direction, or null if in invalid direction is supplied.
     public Room getAdjoiningRoom(char direction) {
@@ -55,6 +56,10 @@ public abstract class Room {
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     // Returns true if this Room has another Room

@@ -9,7 +9,30 @@ public class Player {
 
     private int score = 0;
 
+    private Room currentRoom;
+
     private List<String> inventory = new ArrayList<>();
+
+    private List<Room> previousRooms = new ArrayList<>();
+
+
+    public void addPreviousRoom(Room room){
+        if (!previousRooms.contains(room)){
+            previousRooms.add(room);
+        }
+    }
+
+    public List<Room> getPreviousRooms(){
+        return previousRooms;
+    }
+
+    public Room getCurrentRoom() {
+        return currentRoom;
+    }
+
+    public void setCurrentRoom(Room currentRoom) {
+        this.currentRoom = currentRoom;
+    }
 
 
 
